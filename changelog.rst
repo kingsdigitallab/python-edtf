@@ -4,6 +4,8 @@ Changelog
 In development
 --------------
 
+* Fix parsing of level 0 intervals when used in a Django field.
+
 
 4.0 (2018-05-31)
 ----------------

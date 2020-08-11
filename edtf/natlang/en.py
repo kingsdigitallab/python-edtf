@@ -43,7 +43,10 @@ def text_to_edtf(text):
 
                 # try parsing as an interval - split by '-'
                 toks = list_item.split("-")
+
+                # kdl: if not an interval split by '-'
                 if len(toks) != 2:
+                    # kdl: try parsing as an interval - split by '/'
                     toks = list_item.split("/")
 
                 if len(toks) == 2:
@@ -208,6 +211,7 @@ def text_to_edtf_date(text):
             # couldn't parse anything - defaults are untouched.
             return
 
+        # kdl: wrap this in try/except to prevent failing when parsing level 0 intervals
         try:
             date1 = dt1.isoformat()[:10]
             date2 = dt2.isoformat()[:10]
