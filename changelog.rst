@@ -4,7 +4,7 @@ Changelog
 In development
 --------------
 
-* Fix parsing of level 0 intervals when used in a Django field.
+* Fix parsing of level 0 intervals in `text_to_edtf`.
 
 
 4.0 (2018-05-31)
