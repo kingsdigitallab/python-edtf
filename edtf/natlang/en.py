@@ -201,8 +201,7 @@ def text_to_edtf_date(text):
                 fuzzy=True,  # force a match, even if it's default date
                 default=DEFAULT_DATE_2,
             )
-
-        except ValueError:
+        except (IndexError, TypeError, ValueError):
             return
 
         if dt1.date() == DEFAULT_DATE_1.date() and dt2.date() == DEFAULT_DATE_2.date():
